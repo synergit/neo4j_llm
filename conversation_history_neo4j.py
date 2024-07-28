@@ -14,17 +14,19 @@ chat_llm = openai_load.load_model()
 SESSION_ID = str(uuid4())
 print(f"Session ID: {SESSION_ID}")
 
-# graph = Neo4jGraph(
-#     url="bolt://localhost:7687",
-#     username="neo4j",
-#     password="pleaseletmein"
-# )
 graph = Neo4jGraph(
-    url="bolt://44.195.69.132:7687",
+    url="bolt://localhost:7687",
     username="neo4j",
-    password="bore-successes-trail"
+    password="pleaseletmein"
 )
 print(graph.schema)
+
+# graph = Neo4jGraph(
+#     url="bolt://44.195.69.132:7687",
+#     username="neo4j",
+#     password="bore-successes-trail"
+# )
+# print(graph.schema)
 
 
 prompt = ChatPromptTemplate.from_messages(
